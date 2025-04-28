@@ -144,6 +144,7 @@
     <ClCompile Include="BossWeak.cpp" />
     <ClCompile Include="BossScene.cpp" />
     <ClCompile Include="Broken.cpp" />
+    <ClCompile Include="BTPlayer.cpp" />
     <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="Button.cpp" />
     <ClCompile Include="DeadState.cpp" />
@@ -218,7 +219,6 @@
     <ClCompile Include="HYScene.cpp" />
     <ClCompile Include="GPImage.cpp" />
     <ClCompile Include="Stage1Scene.cpp" />
-    <ClCompile Include="StageClear.cpp" />
     <ClCompile Include="Subject.cpp" />
     <ClCompile Include="Syringe.cpp" />
     <ClCompile Include="TaeKyungObject.cpp" />
@@ -245,6 +245,7 @@
     <ClInclude Include="BossWeak.h" />
     <ClInclude Include="BossScene.h" />
     <ClInclude Include="Broken.h" />
+    <ClInclude Include="BTPlayer.h" />
     <ClInclude Include="Bullet.h" />
     <ClInclude Include="Button.h" />
     <ClInclude Include="DeadState.h" />
@@ -327,7 +328,6 @@
     <ClInclude Include="HYScene.h" />
     <ClInclude Include="GPImage.h" />
     <ClInclude Include="Stage1Scene.h" />
-    <ClInclude Include="StageClear.h" />
     <ClInclude Include="Subject.h" />
     <ClInclude Include="Syringe.h" />
     <ClInclude Include="TaeKyungObject.h" />

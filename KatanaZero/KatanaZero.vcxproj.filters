@@ -166,6 +166,9 @@
     <Filter Include="MainGame\Enemy\Hidden\Weak">
       <UniqueIdentifier>{65b9da7f-2e56-4e73-8e2e-dd01c300e8ad}</UniqueIdentifier>
     </Filter>
+    <Filter Include="MainGame\Jiun">
+      <UniqueIdentifier>{2c8dfb3d-cefb-4666-8f59-ce0bdb7b91ac}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Timer.cpp">
@@ -425,13 +428,6 @@
     <ClCompile Include="ScenePlayer.cpp">
       <Filter>MainGame\Scene</Filter>
     </ClCompile>
-
-    <ClCompile Include="BossScene.cpp">
-      <Filter>?Üå?ä§ ?åå?ùº</Filter>
-    </ClCompile>
-    <ClCompile Include="PickUp.cpp">
-      <Filter>?Üå?ä§ ?åå?ùº</Filter>
-    </ClCompile>
     <ClCompile Include="Turret.cpp">
       <Filter>MainGame\Enemy\Weapon</Filter>
     </ClCompile>
@@ -449,7 +445,6 @@
     </ClCompile>
     <ClCompile Include="ParticleEffect.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="StageClear.cpp" />
     <ClCompile Include="ArrowUI.cpp">
       <Filter>MainGame\UI\Arrow</Filter>
     </ClCompile>
@@ -476,6 +471,11 @@
       <Filter>MainGame\Enemy\Hidden\Weak</Filter>
     </ClCompile>
     <ClCompile Include="DeadState.cpp" />
+    <ClCompile Include="BossScene.cpp" />
+    <ClCompile Include="PickUp.cpp" />
+    <ClCompile Include="BTPlayer.cpp">
+      <Filter>MainGame\Jiun</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainGame.h">
@@ -744,12 +744,6 @@
     <ClInclude Include="ScenePlayer.h">
       <Filter>MainGame\Scene</Filter>
     </ClInclude>
-    <ClInclude Include="BossScene.h">
-      <Filter>?ó§?çî ?åå?ùº</Filter>
-    </ClInclude>
-    <ClInclude Include="PickUp.h">
-      <Filter>?ó§?çî ?åå?ùº</Filter>
-    </ClInclude>
     <ClInclude Include="Turret.h">
       <Filter>MainGame\Enemy\Weapon</Filter>
     </ClInclude>
@@ -769,7 +763,6 @@
     <ClInclude Include="ParticleEffect.h" />
     <ClInclude Include="CommonFunction.h" />
     <ClInclude Include="config.h" />
-    <ClInclude Include="StageClear.h" />
     <ClInclude Include="ArrowUI.h">
       <Filter>MainGame\UI\Arrow</Filter>
     </ClInclude>
@@ -796,5 +789,10 @@
       <Filter>MainGame\Enemy\Hidden\Weak</Filter>
     </ClInclude>
     <ClInclude Include="DeadState.h" />
+    <ClInclude Include="BossScene.h" />
+    <ClInclude Include="PickUp.h" />
+    <ClInclude Include="BTPlayer.h">
+      <Filter>MainGame\Jiun</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

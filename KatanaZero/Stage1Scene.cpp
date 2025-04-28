@@ -69,39 +69,39 @@ HRESULT Stage1Scene::Init()
 
 	slowStart = false;
 
-	
+
 
 	if (FAILED(LineManager->LoadFile(L"Data/Stage1/Stage1Line.dat")))
 	{
-		MessageBox(g_hWnd, TEXT("Stage1Scene LineManager LoadFile Failed."), TEXT("ï¿½ï¿½ï¿½ï¿½"), MB_OK);
+		MessageBox(g_hWnd, TEXT("Stage1Scene LineManager LoadFile Failed."), TEXT("½ÇÆÐ"), MB_OK);
 		return E_FAIL;
 	}
 
 	if (FAILED(InitImage()))
 	{
-		MessageBox(g_hWnd, TEXT("Stage1Scene InitImage Failed."), TEXT("ï¿½ï¿½ï¿½ï¿½"), MB_OK);
+		MessageBox(g_hWnd, TEXT("Stage1Scene InitImage Failed."), TEXT("½ÇÆÐ"), MB_OK);
 		return E_FAIL;
 	}
 
 	if (FAILED(InitObject()))
 	{
-		MessageBox(g_hWnd, TEXT("Stage1Scene InitObject Failed."), TEXT("ï¿½ï¿½ï¿½ï¿½"), MB_OK);
+		MessageBox(g_hWnd, TEXT("Stage1Scene InitObject Failed."), TEXT("½ÇÆÐ"), MB_OK);
 		return E_FAIL;
 	}
 	if (FAILED(InitEffects()))
 	{
-		MessageBox(g_hWnd, TEXT("Stage1Scene InitEffect Failed."), TEXT("ï¿½ï¿½ï¿½ï¿½"), MB_OK);
+		MessageBox(g_hWnd, TEXT("Stage1Scene InitEffect Failed."), TEXT("½ÇÆÐ"), MB_OK);
 		return E_FAIL;
 	}
 
-	SoundManager::GetInstance()->PlayBGM("Katana ZeroTest");
-	//SoundManager::GetInstance()->PlayBGM("pyshroom");
+	//SoundManager::GetInstance()->PlayBGM("Katana ZeroTest");
+	SoundManager::GetInstance()->PlayBGM("pyshroom");
 	return S_OK;
 }
 
 HRESULT Stage1Scene::InitImage()
 {
-	// ï¿½Ø´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½ ï¿½ß°ï¿½
+	// ÇØ´ç ¾À¿¡ ÇÊ¿äÇÑ ¸ðµç ÀÌ¹ÌÁö Ãß°¡
 	ImageManager::GetInstance()->AddImage("black", L"Image/Background/blackBg.bmp", 1920, 1080, 1, 1, true, RGB(255, 0, 255));
 	ImageManager::GetInstance()->AddImage("TestPlayer", L"Image/headhunter_jump.bmp", 27, 44, 1, 1, true, RGB(255, 0, 255));
 
@@ -125,7 +125,7 @@ HRESULT Stage1Scene::InitObject()
 	Tile* tile = new Tile();
 	if (FAILED(tile->Init(L"Data/Stage1/Stage1Tile.dat")))
 	{
-		MessageBox(g_hWnd, TEXT("Stage1Scene tile Failed."), TEXT("ï¿½ï¿½ï¿½ï¿½"), MB_OK);
+		MessageBox(g_hWnd, TEXT("Stage1Scene tile Failed."), TEXT("½ÇÆÐ"), MB_OK);
 		return E_FAIL;
 	}
 	ObjectManager->AddGameObject(EObjectType::GameObject, tile);
@@ -141,13 +141,13 @@ HRESULT Stage1Scene::InitEffects()
 void Stage1Scene::TestCode()
 {
 	if (KeyManager::GetInstance()->IsOnceKeyDown(VK_F1))
-		SceneManager::GetInstance()->ChangeScene("Test", "ï¿½Îµï¿½_1");
+		SceneManager::GetInstance()->ChangeScene("Test", "·Îµù_1");
 	if (KeyManager::GetInstance()->IsOnceKeyDown(VK_F2))
-		SceneManager::GetInstance()->ChangeScene("MapTool", "ï¿½Îµï¿½_1");
+		SceneManager::GetInstance()->ChangeScene("MapTool", "·Îµù_1");
 	if (KeyManager::GetInstance()->IsOnceKeyDown(VK_ESCAPE))
-		SceneManager::GetInstance()->ChangeScene("Home", "ï¿½Îµï¿½_1");
+		SceneManager::GetInstance()->ChangeScene("Home", "·Îµù_1");
 	if (KeyManager::GetInstance()->IsOnceKeyDown(VK_F4))
-		SceneManager::GetInstance()->ChangeScene("Boss", "ï¿½Îµï¿½_1");
+		SceneManager::GetInstance()->ChangeScene("Boss", "·Îµù_1");
 }
 
 void Stage1Scene::InitBackgroundImage()
@@ -176,7 +176,7 @@ void Stage1Scene::LoadBackground()
 		OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
 	if (hFile == INVALID_HANDLE_VALUE)
 	{
-		MessageBox(g_hWnd, L"LoadBackGround Failed.", TEXT("ï¿½ï¿½ï¿½"), MB_OK);
+		MessageBox(g_hWnd, L"LoadBackGround Failed.", TEXT("°æ°í"), MB_OK);
 		return;
 	}
 
@@ -227,7 +227,7 @@ void Stage1Scene::LoadObject()
 		OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
 	if (hFile == INVALID_HANDLE_VALUE)
 	{
-		MessageBox(g_hWnd, L"LoadObject Failed.", TEXT("ï¿½ï¿½ï¿½"), MB_OK);
+		MessageBox(g_hWnd, L"LoadObject Failed.", TEXT("°æ°í"), MB_OK);
 		return;
 	}
 
@@ -283,7 +283,7 @@ void Stage1Scene::LoadFloor()
 		OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
 	if (hFile == INVALID_HANDLE_VALUE)
 	{
-		MessageBox(g_hWnd, L"LoadObject Failed.", TEXT("ï¿½ï¿½ï¿½"), MB_OK);
+		MessageBox(g_hWnd, L"LoadObject Failed.", TEXT("°æ°í"), MB_OK);
 		return;
 	}
 
@@ -329,7 +329,7 @@ void Stage1Scene::Update()
 {
 	if (KeyManager::GetInstance()->IsOnceKeyDown(VK_F5))
 	{
-		SceneManager::GetInstance()->ChangeScene("Home", "ï¿½Îµï¿½_1");
+		SceneManager::GetInstance()->ChangeScene("Home", "·Îµù_1");
 		return;
 	}
 
@@ -341,18 +341,18 @@ void Stage1Scene::Update()
 
 	ScrollManager->Update();
 
-	//ï¿½ï¿½ï¿½Î¿ï¿½
+	//½½·Î¿ì
 	if (KeyManager::GetInstance()->IsStayKeyDown(VK_SHIFT))
 	{
 		if (ui->getBattery() > 0.0001f)
 		{
 			ui->UpdateSlow(true);
-			//ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½Ö±ï¿½                  //ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½ 0 ~ 1 / ï¿½Ø´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Âµï¿½ ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ò°Å³ï¿½
+			//½½·Î¿ì ÁÖ±â                  //½½·Î¿ì°è¼ö 0 ~ 1 / ÇØ´ç °è¼ö±îÁö °¡´Âµ¥ ¸îÃÊµ¿¾È º¸°£ÇÒ°Å³Ä
 			TimerManager::GetInstance()->SetSlow(0.1f, 0.2f);
 		}
-		
+
 	}
-	else  // ï¿½ï¿½ï¿½Î¿ï¿½ Ç®ï¿½ï¿½
+	else  // ½½·Î¿ì Ç®±â
 	{
 		ui->UpdateSlow(false);
 		TimerManager::GetInstance()->SetSlow(1.f, 0.2f);
